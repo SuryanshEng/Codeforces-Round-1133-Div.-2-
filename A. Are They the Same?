@@ -1,0 +1,14 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    int T; cin >> T;
+    while(T--) {
+        int N,K; cin >> N >> K;
+        int P = K & 1, Golu = 0, Chomu = 0;
+        for(int i = 0,X; i < N; i++) cin >> X, Golu += (X & 1) == P;
+        for(int i = 0,X; i < N; i++) cin >> X, Chomu += ( X & 1) == P;
+        cout << (Golu <= Chomu ? "YES" : "NO") << '\n';
+}
+}
